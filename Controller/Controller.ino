@@ -1,11 +1,12 @@
 #include <Bluepad32.h>
 #include <ESP32Servo.h>
+#include <Preferences.h>
 
-int leftDrivePin = 25;
-int rightDrivePin = 26;
-int liftPin = 27;
-int intakePin = 32;
-int winchPin = 33;
+int leftDrivePin = 13;
+int rightDrivePin = 14;
+int liftPin = 34;
+int intakePin = 27;
+int winchPin = 26;
 
 Servo leftDrive;
 Servo rightDrive;
@@ -18,6 +19,8 @@ const int liftUpperBound = 2300;
 const int liftLowerBound = 650;
 
 ControllerPtr myControllers[BP32_MAX_GAMEPADS];
+
+Preferences preferences;
 
 // This callback gets called any time a new gamepad is connected.
 // Up to 4 gamepads can be connected at the same time.
@@ -39,6 +42,7 @@ void onConnectedController(ControllerPtr ctl) {
     if (!foundEmptySlot) {
         Serial.println("CALLBACK: Controller connected, but could not found empty slot");
     }
+    digitalWrite(2, LOW);
 }
 
 void onDisconnectedController(ControllerPtr ctl) {
@@ -183,9 +187,6 @@ void processControllers() {
 // Arduino setup function. Runs in CPU 1
 void setup() {
     pinMode(2, OUTPUT);
-    digitalWrite(2, HIGH);
-    delay(100);
-    digitalWrite(2, LOW);
 
     pinMode(leftDrivePin, OUTPUT);
     leftDrive.attach(leftDrivePin, 1000, 2000);
@@ -216,13 +217,23 @@ void setup() {
     // Setup the Bluepad32 callbacks
     BP32.setup(&onConnectedController, &onDisconnectedController);
 
-    BP32.enableBLEService(false);
+    BP32.enableBLEService(false); // set to true if using a BLE controller (xbox)
 
-    BP32.enableNewBluetoothConnections(false);
+    // check for paired controller
+    preferences.begin("robot", false);
+    if (preferences.getBool("paired") == true) {
+        Serial.println ("Controller already paired");
+        BP32.enableNewBluetoothConnections(false); // do not allow new connections if there is a paired controller
+    } else {
+        Serial.println ("No paired controller");
 
-    // uncomment to make bluepad32 forget previous controllers
-    // BP32.forgetBluetoothKeys();
-
+        // forget previous controllers and connect to a new controller
+        BP32.forgetBluetoothKeys();
+        BP32.enableNewBluetoothConnections(true);
+        preferences.putBool("paired", true); // assume a controller was paired
+        digitalWrite(2, HIGH); // turn on the LED to let the user know we are in pairing mode
+    }
+    preferences.end();
 }
 
 // Arduino loop function. Runs in CPU 1.
@@ -234,11 +245,18 @@ void loop() {
     if (dataUpdated)
         processControllers();
 
-    // The main loop must have some kind of "yield to lower priority task" event.
-    // Otherwise, the watchdog will get triggered.
-    // If your main loop doesn't have one, just add a simple `vTaskDelay(1)`.
-    // Detailed info here:
-    // https://stackoverflow.com/questions/66278271/task-watchdog-got-triggered-the-tasks-did-not-reset-the-watchdog-in-time
+    // if the boot button is pressed, send the board into pairing mode
+    if (digitalRead(0) == LOW) {
+        Serial.println("Entering pairing mode on next reboot");
+        preferences.begin("robot", false);
+        preferences.putBool("paired", false); // set robot to unpair at next reboot
+        preferences.end();
+
+        digitalWrite(2, HIGH); // turn on the LED to let the user know we are in pairing mode
+        
+        while (digitalRead(0) == LOW) vTaskDelay(10);
+        esp_restart();
+    }
 
     //     vTaskDelay(1);
     vTaskDelay(10);
