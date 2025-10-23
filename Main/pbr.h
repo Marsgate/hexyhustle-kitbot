@@ -1,5 +1,7 @@
 #pragma once
 #include <ESP32Servo.h>
+#include <Preferences.h>
+#include <Bluepad32.h>
 
 #define MOTOR_MICROS_MIN 1000
 #define MOTOR_MICROS_MAX 2000
@@ -24,20 +26,27 @@
 #define S6 18
 
 #define ONBOARD_LED 2
+#define BOOT_BTN 0
+
+extern Preferences preferences;
+extern ControllerPtr ctl;
 
 class Motor {
   public:
-    void init(int pin);
+    void init(int pin, bool reversed = false, int lowerLimit = MOTOR_MICROS_MIN, int upperLimit = MOTOR_MICROS_MAX);
     void move(int speed);
     int getSpeed();
   private:
     Servo _servo;
     int _speed;
+    int _lowerLimit;
+    int _upperLimit;
+    bool reversed;
 };
 
 class ServoMotor {
   public:
-    void init(int pin, int lowerLimit = SERVO_MICROS_MIN, int upperLimit = SERVO_MICROS_MAX);
+    void init(int pin, bool reversed = false, int lowerLimit = SERVO_MICROS_MIN, int upperLimit = SERVO_MICROS_MAX);
     void moveAbsolute(int position);
     void moveRelative(int step);
     int getPosition();
@@ -46,4 +55,11 @@ class ServoMotor {
     int _position;
     int _lowerLimit;
     int _upperLimit;
+    bool reversed;
 };
+
+void pbrInit();
+void enterPairingMode();
+void onConnectedController(ControllerPtr controller);
+void onDisconnectedController(ControllerPtr controller);
+void dumpGamepad(ControllerPtr ctl);
