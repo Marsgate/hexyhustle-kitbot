@@ -41,12 +41,12 @@ class Motor {
     int _speed;
     int _lowerLimit;
     int _upperLimit;
-    bool reversed;
+    bool _reversed;
 };
 
 class ServoMotor {
   public:
-    void init(int pin, bool reversed = false, int lowerLimit = SERVO_MICROS_MIN, int upperLimit = SERVO_MICROS_MAX);
+    void init(int pin, int lowerLimit = SERVO_MICROS_MIN, int upperLimit = SERVO_MICROS_MAX, int initialPosition = 1500);
     void moveAbsolute(int position);
     void moveRelative(int step);
     int getPosition();
@@ -55,7 +55,6 @@ class ServoMotor {
     int _position;
     int _lowerLimit;
     int _upperLimit;
-    bool reversed;
 };
 
 void pbrInit();

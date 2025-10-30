@@ -32,16 +32,16 @@ void driverControls() {
     }
 
     // descore
-    if (ctl->l1()) {
-        descore.moveRelative(20);
-    } else if (ctl->l2()) {
-        descore.moveRelative(-20);
+    if (ctl->l2()) {
+        descore.moveAbsolute(2100);
+    } else {
+        descore.moveAbsolute(1050);
     }
 
     // flipper
-    if (ctl->a()) {
-        flipper.moveAbsolute(SERVO_MICROS_MIN);
-    } else if (ctl->b()) {
+    if (ctl->l1()) {
+        flipper.moveAbsolute(1200);
+    } else {
         flipper.moveAbsolute(SERVO_MICROS_MAX);
     }
   
@@ -73,15 +73,14 @@ void setup() {
     BP32.enableBLEService(false); // set to true for BLE controllers (xbox)
 
     // motors
-    leftDrive.init(ESC1A);
-    rightDrive.init(ESC1B, 1); // reversed
+    leftDrive.init(ESC1A, 1);
+    rightDrive.init(ESC1B); // reversed
     intake.init(ESC2A);
     hang.init(ESC2B);
 
     // servos
-    descore.init(S1);
-    flipper.init(S2);
-    flipper.moveAbsolute(0);
+    descore.init(S1, 1100, 2100, 1050);
+    flipper.init(S2, 1000, 2500, 2500);
 }
 
 void loop() {

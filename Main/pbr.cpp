@@ -10,10 +10,13 @@ void Motor::init(
   pinMode(pin, OUTPUT);
   _lowerLimit = lowerLimit;
   _upperLimit = upperLimit;
+  _reversed = reversed;
 
   // double attatch due to a bug
   _servo.attach(pin, lowerLimit, upperLimit);
   _servo.attach(pin, lowerLimit, upperLimit);
+
+  _servo.write(90); // set to 0 speed
 }
 
 void Motor::move(int speed) {
@@ -22,6 +25,11 @@ void Motor::move(int speed) {
     speed = 100;
   } else if (speed < -100) {
     speed = -100;
+  }
+
+  // apply the reversal
+  if (_reversed == true) {
+    speed = -speed;
   }
 
   // save the speed to the object
@@ -40,9 +48,9 @@ int Motor::getSpeed() {
 // ServoMotor
 void ServoMotor::init(
   int pin,
-  bool reversed,
   int lowerLimit,
-  int upperLimit
+  int upperLimit,
+  int initialPosition
 ) {
   pinMode(pin, OUTPUT);
   _lowerLimit = lowerLimit;
@@ -51,6 +59,8 @@ void ServoMotor::init(
   // double attatch due to a bug
   _servo.attach(pin, lowerLimit, upperLimit);
   _servo.attach(pin, lowerLimit, upperLimit);
+
+  _servo.writeMicroseconds(initialPosition);
 }
 
 void ServoMotor::moveAbsolute(int position) {
