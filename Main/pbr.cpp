@@ -11,12 +11,10 @@ void Motor::init(
   _lowerLimit = lowerLimit;
   _upperLimit = upperLimit;
   _reversed = reversed;
-
-  // double attatch due to a bug
+  
   _servo.attach(pin, lowerLimit, upperLimit);
-  _servo.attach(pin, lowerLimit, upperLimit);
-
-  _servo.write(90); // set to 0 speed
+  _servo.write(90);
+  delay(50);
 }
 
 void Motor::move(int speed) {
@@ -48,9 +46,9 @@ int Motor::getSpeed() {
 // ServoMotor
 void ServoMotor::init(
   int pin,
+  int initialPosition,
   int lowerLimit,
-  int upperLimit,
-  int initialPosition
+  int upperLimit
 ) {
   pinMode(pin, OUTPUT);
   _lowerLimit = lowerLimit;

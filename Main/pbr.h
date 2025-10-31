@@ -46,7 +46,7 @@ class Motor {
 
 class ServoMotor {
   public:
-    void init(int pin, int lowerLimit = SERVO_MICROS_MIN, int upperLimit = SERVO_MICROS_MAX, int initialPosition = 1500);
+    void init(int pin, int initialPosition = 1500, int lowerLimit = SERVO_MICROS_MIN, int upperLimit = SERVO_MICROS_MAX);
     void moveAbsolute(int position);
     void moveRelative(int step);
     int getPosition();
