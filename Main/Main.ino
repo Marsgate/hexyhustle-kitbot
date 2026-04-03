@@ -9,13 +9,9 @@ Motor intake;
 Motor hang;
 
 // servos
-ServoMotor descore;
-const int descoreMin = 700;
-const int descoreMax = 2050;
-
 ServoMotor flipper;
-const int flipperMin = 1200;
-const int flipperMax = 2500;
+const int flipperMin = 700;
+const int flipperMax = 2050;
 
 void driverControls() {
     // hang
@@ -36,18 +32,11 @@ void driverControls() {
         intake.move(0);
     }
 
-    // descore
-    if (ctl->l2()) {
-        descore.moveAbsolute(descoreMax);
-    } else {
-        descore.moveAbsolute(descoreMin);
-    }
-
     // flipper
     if (ctl->l1()) {
-        flipper.moveAbsolute(flipperMin);
-    } else {
         flipper.moveAbsolute(flipperMax);
+    } else {
+        flipper.moveAbsolute(flipperMin);
     }
   
     // get joysticks
@@ -60,6 +49,19 @@ void driverControls() {
     }
     if (abs(y) < 100) {
         y = 0;
+    }
+
+    // limits
+    if (x > 512) {
+        x = 512;
+    } else if (x < -512) {
+        x = -512;
+    }
+
+    if (y > 512) {
+        y = 512;
+    } else if (y < -512) {
+        y = -512;
     }
 
     // map to +/- 100
@@ -78,14 +80,13 @@ void setup() {
     BP32.enableBLEService(true); // set to true for BLE controllers (xbox)
 
     // motors
-    leftDrive.init(M3, 1); // reversed
-    rightDrive.init(M5);
-    intake.init(M1);
-    hang.init(M4);
+    leftDrive.init(M3); // reversed
+    rightDrive.init(M4, 1);
+    intake.init(M5);
+    hang.init(M2);
 
     // servos
-    descore.init(S1, descoreMin);
-    flipper.init(S2, flipperMax);
+    flipper.init(S1, flipperMin);
 }
 
 void loop() {

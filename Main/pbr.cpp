@@ -42,8 +42,14 @@ void Motor::move(int speed) {
 
   // convert to PWM and write to the motor
   speed = map(speed, -100, 100, -255, 255);
-  analogWrite(_fwdPin, speed);
-  analogWrite(_revPin, -speed);
+
+  bool fwd = false;
+  if (speed > 0) {
+    fwd = true;
+  }
+
+  analogWrite(_fwdPin, fwd ? speed : 0);
+  analogWrite(_revPin, !fwd ? -speed : 0);
 }
 
 int Motor::getSpeed() {
