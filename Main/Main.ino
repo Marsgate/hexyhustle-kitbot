@@ -10,7 +10,7 @@ Motor hang;
 
 // servos
 ServoMotor flipper;
-const int flipperMin = 700;
+const int flipperMin = 500;
 const int flipperMax = 2050;
 
 void driverControls() {
