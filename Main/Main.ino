@@ -82,7 +82,7 @@ void setup() {
     // motors
     leftDrive.init(M3); // reversed
     rightDrive.init(M4, 1);
-    intake.init(M5);
+    intake.init(M6);
     hang.init(M2);
 
     // servos
