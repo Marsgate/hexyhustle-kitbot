@@ -24,7 +24,18 @@ When designing 3D printable parts to interface with this hardware, the following
 - 0.18", 4mm Shaft thru hole diameter
 
 ## Assembly
-Video coming soon!
+If you did not buy a kit that contains all prints, start by printing the STLs contained in CAD/Kitbot. Reference the BOM.md to see quantities of each part to print. If a part is mirrored, a pre-mirrored STL is provided for convenience.
+
+Assembly video coming soon!
+
+## Lipo charging
+Do not leave batteries unattended while charging! 
+It is reccommended that you charge batteries in a lipo safe bag/box.
+
+B6 Neo manual:
+https://www.skyrc.com/download/100198%20B6neo%20Instruction%20Manual%20V1.1_240318.pdf
+
+After using the batteries, it is reccommended to discharge them to storage voltage for longevity.
 
 ## Code
 
