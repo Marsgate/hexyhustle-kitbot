@@ -1,0 +1,8 @@
+Name,Unit,Expression,Value,Comments,Favorite
+hm3,in,0.13 in,0.13,M3 screw thru hole diameter for horizontal print orientation,false
+vm3,in,0.14 in,0.14,M3 screw thru hole diameter for vertical print orientation,false
+m3cb,in,0.15 in,0.15,Counterbore depth for m3 socket screws,false
+heatset,in,0.18 in,0.18,"Diameter of heatset insert holes",false
+hm3_thread,in,0.115 in,0.115,M3 threaded hole size,false
+hex_hole,in,0.25 in,0.25,Hex shaft thru hole diameter,false
+heatset_depth,in,0.18 in,0.18,Minimum depth of a heatset insert hole,false
