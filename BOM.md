@@ -1,6 +1,8 @@
 # BOM
 
-## Electronics
+## Items included in the kit
+
+### Electronics
 - The Flight Controller x1
 - XT60-XT30 Short Cable x1
 - XT60-XT30 Long Cable x1
@@ -9,7 +11,7 @@
 - DC Motor w/ Motor cap x4
 - Servo Motor x1
 
-## Hardware
+### Hardware
 - Heatset insert pack x1
 - Screw pack x1
 - Allen wrench x1
@@ -21,7 +23,7 @@
 - Traction Wheel x2
 - Flex Wheel x 4
 
-## Prints
+### Prints
 - 12T Hex Gear x1
 - 12T M3 Gear x3 
 - 19T D Gear x2
@@ -47,3 +49,7 @@
 - Rear Tower x2 Mirrored
 - Tower Brace x1
 - Tower Standoff x1
+
+## Items that are required, but are not included
+- USB-C PD3.0/QC Charging block for the lipo charger (Most phone/laptop chargers will work)
+- Bluetooth controller (PS4/5, Xbox, etc)
