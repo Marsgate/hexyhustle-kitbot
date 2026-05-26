@@ -1,4 +1,4 @@
-#include "pbr.h"
+#include "psr.h"
 
 int M1[2] = {14, 27};
 int M2[2] = {13, 12};
@@ -100,7 +100,7 @@ int ServoMotor::getPosition() {
 
 Preferences preferences;
 
-void pbrInit() {
+void psrInit() {
   pinMode(ONBOARD_LED, OUTPUT);
   pinMode(BOOT_BTN, INPUT);
 

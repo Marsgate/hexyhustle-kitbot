@@ -1,4 +1,4 @@
-#include "pbr.h"
+#include "psr.h"
 
 ControllerPtr ctl;
 
@@ -40,7 +40,7 @@ void driverControls() {
     }
   
     // get joysticks
-    int x = ctl->axisRX();
+    int x = ctl->axisX();
     int y = ctl->axisY();
 
     // deadzone
@@ -76,12 +76,12 @@ void driverControls() {
 void setup() {
     Serial.begin(115200);
 
-    pbrInit();
+    psrInit();
     BP32.enableBLEService(true); // set to true for BLE controllers (xbox)
 
     // motors
-    leftDrive.init(M3); // reversed
-    rightDrive.init(M4, 1);
+    leftDrive.init(M3);
+    rightDrive.init(M4, 1); // reversed
     intake.init(M6);
     hang.init(M2);
 

@@ -1,5 +1,5 @@
-#ifndef PBR_H
-#define PBR_H
+#ifndef PSR_H
+#define PSR_H
 
 #include <ESP32Servo.h>
 #include <Preferences.h>
@@ -52,7 +52,7 @@ class ServoMotor {
     int _upperLimit;
 };
 
-void pbrInit();
+void psrInit();
 void enterPairingMode();
 void onConnectedController(ControllerPtr controller);
 void onDisconnectedController(ControllerPtr controller);
