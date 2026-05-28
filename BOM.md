@@ -43,13 +43,14 @@
 - Flipper Paddle Mount x2 Mirrored
 - Flipper Paddle x1
 - Hang Arm x2 Mirrored
+- Hang Crossbrace
 - Hex Collar x1
 - Intake Arm x2 Mirrored
 - Intake Tower x2 Mirrored
 - Intake Brace x1
 - Omni x4
 - Rear Tower x2 Mirrored
-- Tower Brace x1
+- Tower Brace x2
 - Tower Standoff x1
 
 ## Items that are required, but are not included
