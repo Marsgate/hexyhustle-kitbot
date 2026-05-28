@@ -29,6 +29,8 @@
 - 19T D Gear x2
 - 24T D Gear x2
 - 24T Hex Gear x1
+- 24T M3 Gear x2
+- 36T Hex Gear x1
 - 42T Wheel Insert x2
 - 48T M3 Gear x1
 - Battery Holder x1
