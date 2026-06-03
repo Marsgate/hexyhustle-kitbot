@@ -18,10 +18,13 @@ When designing 3D printable parts to interface with this hardware, the following
 - 0.14", M3 screw thru hole diameter for hold printed standing up
 - 0.15", Counterbore depth for M3 socket screws 
 - 0.18", M3 Heatset insert hole diameter
-- 0.115", M3 hole diameter for threading into the plastic
+- 0.115", M3 hole diameter for threading into the plastic when printed flat
+- 0.108", M3 hole diameter for threading into the plastic when printed standing up
 - 0.25", 5mm Hex shaft thru hole diameter
 - 0.2", Blind depth of a heatset insert hole
 - 0.18", 4mm Shaft thru hole diameter
+
+Holes printed standing up are smaller to accounts for drooping during printing. This may vary from printer to printer depending on overhang performance.
 
 ## Assembly
 If you did not buy a kit that contains all prints, start by printing the STLs contained in CAD/Kitbot. Reference the BOM.md to see quantities of each part to print. If a part is mirrored, a pre-mirrored STL is provided for convenience.
