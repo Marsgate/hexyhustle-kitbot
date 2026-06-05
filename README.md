@@ -53,10 +53,12 @@ After using the batteries, it is reccommended to discharge them to storage volta
  https://raw.githubusercontent.com/ricardoquesada/esp32-arduino-lib-builder/master/bluepad32_files/package_esp32_bluepad32_index.json
  ```
 - Install the esp32 and bluepad32 packages by clicking the "Install" button in the board manager.
-3. Open the Code.ino file
-4. Select the board "esp32_bluepad32 > ESP32 Dev Module"
-5. Plug in the brain, and select the COM port that appears.
-6. Verify that uploading code to the brain works
+3. Install the ESP32Servo library
+4. Open the Code.ino file
+5. Select the board "esp32_bluepad32 > ESP32 Dev Module"
+6. Set the baud rate to 115200
+7. Plug in the brain, and select the COM port that appears.
+8. Verify that uploading code to the brain works
 
 ### Configuration
 
