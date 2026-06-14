@@ -10,6 +10,7 @@
 - 3S Lipo x1
 - DC Motor w/ Motor cap x4
 - Servo Motor x1
+- Extension Cables x2
 
 ### Hardware
 - Heatset insert pack x1
