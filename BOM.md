@@ -18,12 +18,12 @@
 - Allen wrench x1
 - Nylon string x1
 - Round Shafts x6
-- Hex Shafts x2
+- Hex Shafts x3
 - Rubber tubing x1
 - Ziptie Pack x1
+- Rubber Band Pack x1
 - Traction Wheel x2
 - Flex Wheel x 4
-- Rubber Band Pack x1
 
 ### Prints
 - 12T Hex Gear x1
@@ -57,4 +57,4 @@
 
 ## Items that are required, but are not included
 - USB-C PD3.0/QC Charging block for the lipo charger (Most phone/laptop chargers will work)
-- Bluetooth controller (PS4/5, Xbox, etc)
+- Bluetooth controller (PS4/5, Xbox, etc)                                                                                                                                                                                                                                                                   
