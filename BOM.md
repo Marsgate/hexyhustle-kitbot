@@ -22,6 +22,7 @@
 - Ziptie Pack x1
 - Traction Wheel x2
 - Flex Wheel x 4
+- Rubber Band Pack x1
 
 ### Prints
 - 12T Hex Gear x1
@@ -48,9 +49,9 @@
 - Intake Arm x2 Mirrored
 - Intake Tower x2 Mirrored
 - Intake Brace x1
-- Omni x4
+- Omni (Multiple Parts) x4
 - Rear Tower x2 Mirrored
-- Tower Brace x2
+- Tower Brace x2 Mirrored
 - Tower Standoff x1
 
 ## Items that are required, but are not included
