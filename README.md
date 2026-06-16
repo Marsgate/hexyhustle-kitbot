@@ -56,9 +56,10 @@ After using the batteries, it is reccommended to discharge them to storage volta
 3. Install the ESP32Servo library
 4. Open the Code.ino file
 5. Select the board "esp32_bluepad32 > ESP32 Dev Module"
-6. Set the baud rate to 115200
-7. Plug in the brain, and select the COM port that appears.
-8. Verify that uploading code to the brain works
+6. Plug in the brain, and select the COM port that appears.
+7. Verify that uploading code to the brain works
+
+If the upload fails, try setting the baud rate to 115200 and retrying.
 
 ### Configuration
 
