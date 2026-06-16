@@ -15,7 +15,7 @@ const int flipperMax = 2050;
 
 void driverControls() {
     // hang
-    if (ctl->x()) {
+    if (ctl->l2()) {
         hang.move(100);
     } else if (ctl->y()) {
         hang.move(-100);
