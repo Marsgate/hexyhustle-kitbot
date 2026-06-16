@@ -4,26 +4,26 @@
 
 ### Electronics
 - The Flight Controller x1
-- XT60-XT30 Short Cable x1
-- XT60-XT30 Long Cable x1
-- B6 Neo Lipo Charger x1
-- 3S Lipo x1
-- DC Motor w/ Motor cap x4
-- Servo Motor x1
-- Extension Cables x2
+- [XT60-XT30 Short Cable x1](https://a.co/d/0g4YD8ml)
+- [XT60-XT30 Long Cable x1](https://a.co/d/04mg2y1r)
+- [B6 Neo Lipo Charger x1](https://a.co/d/05w2RGuz)
+- [3S Lipo x1](https://a.co/d/0hQ7UNYJ)
+- [DC Motor w/ Motor cap x4](https://www.aliexpress.us/item/3256807353631389.html)
+- [Servo Motor x1](https://a.co/d/05sNs3aC)
+- [Extension Cables x2](https://a.co/d/09EsJgbW)
 
 ### Hardware
-- Heatset insert pack x1
-- Screw pack x1
-- Allen wrench x1
-- Nylon string x1
-- Round Shafts x6
-- Hex Shafts x3
-- Rubber tubing x1
-- Ziptie Pack x1
-- Rubber Band Pack x1
-- Traction Wheel x2
-- Flex Wheel x 4
+- [Heatset insert pack x1](https://a.co/d/0esVJgH2)
+- [Screw pack x1](https://a.co/d/09cQsdQA)
+- [Allen wrench x1](https://a.co/d/01DbpG43)
+- [Nylon string x1](https://a.co/d/0iqGt5RV)
+- [Round Shafts x6](https://a.co/d/01yORJ63)
+- [Hex Shafts x3](https://a.co/d/0f2OXTUU)
+- [Rubber tubing x1](https://a.co/d/09hxUCcK)
+- [Ziptie Pack x1](https://a.co/d/0elJUc7y)
+- [Rubber Band Pack x1](https://a.co/d/08hcKJ02)
+- [Traction Wheel x2](https://banebots.com/t61p-243bg/)
+- [Flex Wheel x 4](https://banebots.com/t61p-203bg/)
 
 ### Prints
 - 12T Hex Gear x1
@@ -56,5 +56,6 @@
 - Tower Standoff x1
 
 ## Items that are required, but are not included
-- USB-C PD3.0/QC Charging block for the lipo charger (Most phone/laptop chargers will work)
-- Bluetooth controller (PS4/5, Xbox, etc)                                                                                                                                                                                                                                                                   
+- [USB-C PD3.0/QC Charging block for the lipo charger (Most tablet/laptop chargers will work)](https://a.co/d/05AJ3r7P)
+- [USB-C cable for the lipo charger and programming the brain](https://a.co/d/07pgoZjv)
+- [Bluetooth controller (PS4/5, Xbox, etc)](https://a.co/d/0fHtbTdB)
