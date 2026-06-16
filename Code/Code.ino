@@ -40,7 +40,7 @@ void driverControls() {
     }
   
     // get joysticks
-    int x = ctl->axisX();
+    int x = ctl->axisRX();
     int y = ctl->axisY();
 
     // deadzone
