@@ -12,6 +12,7 @@
 - [Servo Motor x1](https://a.co/d/05sNs3aC)
 - [Extension Cables x2](https://a.co/d/09EsJgbW)
 
+
 ### Hardware
 - [Heatset insert pack x1](https://a.co/d/0esVJgH2)
 - [Screw pack x1](https://a.co/d/09cQsdQA)
@@ -50,7 +51,13 @@
 - Intake Arm x2 Mirrored
 - Intake Tower x2 Mirrored
 - Intake Brace x1
-- Omni (Multiple Parts) x4
+- Omni x4
+    - Roller x16
+    - Omni Bottom x2
+    - Omni Top x2
+    - Omni Spacer x1
+    - Omni Post x1
+    - Omni Cap x1
 - Rear Tower x2 Mirrored
 - Tower Brace x2 Mirrored
 - Tower Standoff x1
