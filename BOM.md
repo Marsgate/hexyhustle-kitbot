@@ -51,8 +51,8 @@
 - Intake Arm x2 Mirrored
 - Intake Tower x2 Mirrored
 - Intake Brace x1
-- Omni x4
-    - Roller x16
+- Omni Wheel x4
+    - Omni Roller x16
     - Omni Bottom x2
     - Omni Top x2
     - Omni Spacer x1
