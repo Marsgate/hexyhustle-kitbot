@@ -66,3 +66,16 @@
 - [USB-C PD3.0/QC Charging block for the lipo charger (Most tablet/laptop chargers will work)](https://a.co/d/05AJ3r7P)
 - [USB-C cable for the lipo charger and programming the brain](https://a.co/d/07pgoZjv)
 - [Bluetooth controller (PS4/5, Xbox, etc)](https://a.co/d/0fHtbTdB)
+
+## Items Required to build your own flight controller
+- PCB (gerbers and schematics in CAD/electronics/kitbot_brain)
+- [10kOhm SMD 1206 resistors x4](https://a.co/d/0fsyfGzN)
+- [1uF SMD 1206 capacitor x1](https://a.co/d/06gvHcsD)
+- [JST XH 2.54mm 2 pin male right angle connector x6](https://a.co/d/0iDRtF4O)
+- [JST XH 2.54mm 4 pin male right angle connector x1](https://a.co/d/0iDRtF4O)
+- [Right angle 2.54mm male pin header](https://a.co/d/06wsUiik)
+- [2.54mm female pin header](https://a.co/d/0bTpzli6)
+- [XT60 PCB mount connector](https://a.co/d/0bN5OuDN)
+- [ESP32 WROOM dev board](https://a.co/d/0duQxi1H)
+- [DRV8833 H-bridge board x3](https://a.co/d/0iz36L0V)
+- [Adjustable buck converter](https://a.co/d/0euiQGr1)
